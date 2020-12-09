@@ -1,59 +1,116 @@
-nav{
-  height: 100vh;
-  background-color: transparent;
-  width: 50px;
-  position: fixed;
-  transition: background-color .3s, width 1.3s;
-  z-index: 1000;
-  box-shadow: none;
+
+.menu {
+  display: flex;
+  background-color: crimson;
+  border-radius: 4px 4px 4px 4px;
+  box-shadow: 0px 1px 1px rgba(59, 59, 59, 0.15);
 }
 
-nav:hover{
-  background-color: #a85063;
-  transition: background-color .3s;
-  width: 300px;
-  box-shadow: 2px 0px 3px #000;
-}
+.menu li {
 
-
-
-main{
-  width: 100%;
-  padding-left: 55px;
-}
-
-.logo{
-  width: 35px;
-  height: 35px;
-  margin: 5px auto;
-  cursor: pointer;
-}
-
-.menu{
+  float: left;
   list-style: none;
-  padding: 0;
-  width: 100%;
-  text-align: center;
-  color: #000;
-  font-weight: bold;
+  margin: 1rem 50px -10px 0px;
+
+}
+
+.menu li a {
+  font-size: 2.5rem;
+  font-family: "Silver";
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  transition: color linear 0.15s;
   cursor: pointer;
-  position: relative;
-  left: -50px;
-  transition: left 1s;
-  
 }
 
-nav:hover .menu{
-  left: 0;
-  color: #CCC;
-  transition: left 1s, color .8s;
+.menu .menu-logo {
+  margin: auto;
+  margin-left: 0px;
+  padding: 10px 10px 10px 20px;
 }
 
-.menu li{
-  margin-top: 15px;
-  transition: .3s;
+.menu .menu-logo a {
+  color: #fff;
 }
 
-.menu li:hover{
-  transform: scale(1.1, 1.1);
+.menu a:hover, .menu .current-active a {
+  text-decoration: none;
+  color: #00f2ff;
+}
+
+.toggle-nav {
+  display: none;
+}
+
+@media screen and (max-width: 767px) {
+  .menu {
+      position: relative;
+      display: inline-block;
+  }
+  .toggle-nav {
+      position: absolute;
+      left: 4%;
+      color: #ffffff;
+      text-decoration: none;
+      line-height: 40px;
+  }
+  .menu .menu-logo {
+      position: relative;
+      left: 40%;
+  }
+  .menu ul.active {
+      display: none;
+  }
+  .menu ul {
+      left: 0px;
+      padding: 10px 25px;
+      margin-top: -5px;
+      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.15);
+      border-radius: 0px 0px 3px 3px;
+      background: #ffffff;
+  }
+  .menu li {
+      margin: 10px 0px 10px 0px;
+      float: none;
+      display: block;
+  }
+  .menu a {
+      display: block;
+  }
+}
+.mid{
+  text-align: center;
+}
+
+*{margin: 0;}
+
+#imgSlider{
+
+  width: 1280px;
+	height: 200px;
+	margin: 8rem auto;
+
+overflow: hidden;
+position: relative;
+}
+
+#pics{
+ 
+
+	width: 5120px;
+height: 200px;
+position: absolute;
+
+}
+
+#pics img{
+border: red 5px solid;
+width: 1280px;
+height: 200px;
+float: left;
+
+}
+
+#pics:hover {
+cursor: pointer;
 }
