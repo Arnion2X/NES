@@ -1,0 +1,59 @@
+nav{
+  height: 100vh;
+  background-color: transparent;
+  width: 50px;
+  position: fixed;
+  transition: background-color .3s, width 1.3s;
+  z-index: 1000;
+  box-shadow: none;
+}
+
+nav:hover{
+  background-color: #a85063;
+  transition: background-color .3s;
+  width: 300px;
+  box-shadow: 2px 0px 3px #000;
+}
+
+
+
+main{
+  width: 100%;
+  padding-left: 55px;
+}
+
+.logo{
+  width: 35px;
+  height: 35px;
+  margin: 5px auto;
+  cursor: pointer;
+}
+
+.menu{
+  list-style: none;
+  padding: 0;
+  width: 100%;
+  text-align: center;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+  position: relative;
+  left: -50px;
+  transition: left 1s;
+  
+}
+
+nav:hover .menu{
+  left: 0;
+  color: #CCC;
+  transition: left 1s, color .8s;
+}
+
+.menu li{
+  margin-top: 15px;
+  transition: .3s;
+}
+
+.menu li:hover{
+  transform: scale(1.1, 1.1);
+}

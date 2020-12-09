@@ -1,0 +1,218 @@
+    
+      body {
+        width: 1280px;
+        height: 800px;
+        color: white;
+        background-color: black;
+        font-family: "Press Start 2P", monospace;
+        font-size: 1rem;
+        text-align: center;
+        text-transform: uppercase;
+        margin: 0;
+      }
+      /* 整個Body的字體以及顏色 */
+      body:before {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+        background: repeating-linear-gradient(
+          #0d122b,
+          #0d122b 2px,
+          #565b73 2px,
+          #565b73 4px
+        );
+        opacity: 0.2;
+        z-index: 100;
+        content: "";
+        pointer-events: none;
+      }
+      /* 把整個畫面弄得像映像管電視的遮罩 */
+
+
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+      /* 連結的a的顏色&讓連結a不要有底線之類的特效 */
+
+      h1 {
+        margin: 0;
+      }
+     /* H1標籤的Margin */
+      .splash-screen {
+        width: 100vw;
+        height: 100vh;
+      }
+     /* 等待畫面 */
+      .title {
+        margin: auto;
+        font-family: "Permanent Marker", monospace;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        height: 40vh;
+        font-size: 2rem;
+        line-height: 0.75;
+        word-break: break-word;
+        max-width: 500px;
+      }
+
+      .title h1 {
+        background: -webkit-linear-gradient(
+          rgb(255, 18, 18) 30%,
+          rgb(255, 215, 38)
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .title-top {
+        transform: skew(-10deg) rotate(-10deg) translateX(-2rem);
+      }
+
+      .title-bottom {
+        transform: skew(-10deg) rotate(-10deg) translateX(1rem);
+      }
+
+      .buttons-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 50vh;
+        margin: auto;
+      }
+
+      .buttons-wrapper a {
+        position: relative;
+        display: block;
+        margin-bottom: 1rem;
+        cursor: pointer;
+      }
+
+      .buttons-wrapper a:hover {
+        bottom: -3px;
+      }
+
+      .bottom {
+        text-align: center;
+      }
+     /* 以上都是螢幕中字體的字體大小以及對齊之類的 */
+      .credit {
+        margin-top: 10px;
+        pointer-events: none;
+        animation: blink 2s linear infinite;
+      }
+      /*動畫加速共使用2秒曲線上升以及永久重播 */
+      @keyframes blink {
+        0% {
+          opacity: 0;
+        }
+        40% {
+          opacity: 0;
+        }
+        41% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+      
+      /* 上面的Animation設定為Blink @keyframe定義幾%該有多少透明度 */
+
+      .grey-with-red {
+        color: rgb(192, 192, 192);
+        text-shadow: 2px 2px 0 rgb(192, 11, 11);
+      }
+     
+      .purple-with-blue {
+        color: rgb(147, 154, 255);
+        text-shadow: 2px 2px 0 rgb(47, 61, 255);
+      }
+
+      .yellow-with-darkyellow {
+        color: rgb(226, 179, 24);
+        text-shadow: 0 2px 0 rgb(107, 77, 11), 2px 0 0 rgb(151, 109, 19),
+          2px 2px 0 rgb(151, 109, 19);
+      }
+
+      .yellow {
+        color: rgb(226, 179, 24);
+      }
+
+      .big {
+        font-size: 8rem;
+      }
+     /* 字體的顏色&陰影 */
+
+
+
+      @media (min-width: 400px) {
+        body {
+          font-size: 1.2rem;
+        }
+
+        .big {
+          font-size: 7rem;
+        }
+      }
+
+
+
+      @media (min-width: 600px) {
+        .big {
+          font-size: 12rem;
+        }
+
+        .title {
+          font-size: 3.5rem;
+          height: 45vh;
+        }
+
+        .buttons-wrapper {
+          height: 40vh;
+        }
+
+        .title-top {
+          transform: skew(-10deg) rotate(-10deg) translateX(-2rem);
+        }
+
+        .title-bottom {
+          transform: skew(-10deg) rotate(-10deg) translateX(3rem);
+        }
+      }
+
+      @media (min-width: 800px) {
+        .credit {
+          position: absolute;
+          right: 50px;
+          margin-top: 0;
+        }
+
+        .buttons-wrapper a {
+          font-size: 1.3em;
+        }
+      }
+      /* 依照不同的視窗大小給予不同的字體大小以及排版 */
+      .load {
+        animation: load 800ms 500ms backwards;
+      }
+
+      @keyframes load {
+        0% {
+          filter: blur(2px) hue-rotate(-150deg);
+        }
+      }
+
+      ::selection {
+        background: #b4fdff;
+      }
+
+      ::-moz-selection {
+        background: #b4fdff;
+      }
+      /* 剛載入網頁時從藍變橘紅色的特效 */
