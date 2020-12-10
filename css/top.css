@@ -36,7 +36,7 @@
 
 .menu a:hover, .menu .current-active a {
   text-decoration: none;
-  color: #00f2ff;
+  color: rgb(233, 233, 130);
 }
 
 .toggle-nav {
@@ -79,7 +79,7 @@
       display: block;
   }
 }
-.mid{
+.mid{height: 50px;
   text-align: center;
 }
 
