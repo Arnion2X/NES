@@ -7,7 +7,7 @@
 #imgSlider{
 
   width: 1280px;
-	height: 200px;
+	height: 500px;
 	margin: 8rem auto;
 
 overflow: hidden;
@@ -15,10 +15,8 @@ position: relative;
 }
 
 #pics{
- 
-
-	width: 5120px;
-height: 200px;
+ 	width: 5120px;
+max-height: 100%;
 position: absolute;
 
 }
@@ -26,11 +24,16 @@ position: absolute;
 #pics img{
 border: red 5px solid;
 width: 1280px;
-height: 200px;
+height: 500px;
 float: left;
 
 }
 
 #pics:hover {
 cursor: pointer;
+}
+
+#pics a img{
+	 max-width: 100%;
+	 max-height: 100%;
 }
