@@ -10,6 +10,8 @@
       }
       /* 整個Body的字體以及顏色 */
       body:before {
+        max-width: 100%;
+        max-height: 100%;
         position: absolute;
         top: 0;
         right: 0;
