@@ -15,7 +15,7 @@ var keyHandler = function (event) {
 	// If complete, alert and reset
 	if (pattern.length === current) {
 		current = 0;
-		document.location.href="https://youtu.be/dQw4w9WgXcQ";
+		document.location.href="game/SF33.html";
 	}
 
 };
