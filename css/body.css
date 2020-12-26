@@ -1,3 +1,4 @@
+
 .flex{
     display:flex;
     align-items:center;
@@ -61,10 +62,12 @@
 
   @media screen and (max-width: 767px){
     .menu {
+        width: 100%;
         position: relative;
         display: inline-block;
     }
     .toggle-nav {
+        width: 100%;
         position: absolute;
         left: 4%;
         color: #ffffff;
@@ -100,137 +103,4 @@
 
 
 
-  /*        適用於電腦螢幕*/
-  @media screen{
-    div{
-      text-align: center;
-        width:1280px;
-        height:560px;
-        margin:auto;
-    }
-    header{
-      display: none;
-      text-align: center;
-        width: 1280px;
-        height: 260px;
-        background-image: url(images/header.jpg);
-    }
-    nav{
-      text-align: center;
-        width: 1280px;
-        height: 55px;
-        background-image: url(images/nav.gif);
-    }
-    nav img{
-        margin: 5px 25px 0px;
-    }
-    aside{
-        width:1280px;
-        height: 265px;
-        background-image: url(images/aside.jpg);
-        float: left;
-    }
-    aside img{
-        display:none;
-    }
-    span{
-        display: none;
-    }
-    article{
-        width:1280px;
-        height:265px;
-        background-image: url(images/article.gif);
-        float: left;
-        font-size:13px;
-    }
-    article h1{
-        font-size:20px;
-        color:brown;
-        text-align: center;
-       
-        margin-top:40px;
-    }
-    article h2{
-        font-size:14px;
-        font-weight: normal;
-        text-align: center;
-        margin-top: 30px;
-    }
-    footer{
-      
-        width:1280px;
-        height:20px;
-        background-image: url(image/imageGif/link.gif);
-        clear:both;
-        font-size:13px;
-        text-align: center;
-       
-      }
-}
-
-
-/*        適用於平版直著拿的情況（平版橫著拿的情況就和電腦螢幕相同）*/
-@media screen and (min-width:481px) and (max-width:768px){
-     div{
-        width:100%;
-        height:auto;
-        margin:auto;
-    }
-    header{
-        width: 480px;
-        height: 260px;
-        background-image: url(images/header.jpg);
-        display: none;
-    }
-    nav{
-        width: 100%;
-        height: auto;
-        background-image: none;
-        text-align: center;
-        padding-bottom: 30px;
-    }
-    nav img{
-        margin: 5px 5px 0px;
-    }
-    aside{
-        width:100%;
-        height: auto;
-        background-image: none;
-        float: none;
-        text-align: center;
-    }
-    aside img{
-        display:inline-block;
-    }
-    span{
-        display: none;
-    }
-    article{
-        width:80%;
-        height:auto;
-        background-image: none;
-        float: none;
-        font-size:16px;
-        margin: auto;
-    }
-    article h1{
-        font-size:24px;
-        color:brown;
-        text-align: center;
-        margin-top:40px;
-    }
-    article h2{
-        font-size:20px;
-        font-weight: normal;
-        text-align: center;
-        margin-top: 30px;
-    }
-    footer{
-        width:100%;
-        height:auto;
-        background-image: none;
-        clear:both;
-        font-size:16px;
-        text-align: center;
-    }
-}
+  
