@@ -1,6 +1,5 @@
-document.getElementById('menubtn').addEventListener('click', function (e) {
-    $(this).toggleClass('active');
-    $('#menuUl').toggleClass('active');
+$('#menubtn').click(function () {
+    $('.leftmenu').toggleClass('active');
 })
 
 $('#menuUl li').click(function () {
@@ -10,4 +9,8 @@ $('#menuUl li').click(function () {
         }
     })
     $(this).toggleClass('current-active');
+})
+
+$('.closebtn').click(function () {
+    $('.leftmenu').toggleClass('active');
 })

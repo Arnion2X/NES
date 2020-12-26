@@ -5,15 +5,23 @@
     <audio loop hidden autoplay>
 
       <source src="music/NESMIX.mp3" type="audio/mpeg">
+     
     </audio>
-      <style>@font-face {font-family: "Silver";src: url('ttf/bit.ttf');}body{font-family:"Silver";}</style>
+      <style>@font-face {font-family: "Silver";src: url('ttf/bit.ttf');}body,div{font-family:"Silver";}</style>
       <meta name="viewport" content="width=device-width, initial-scale=1">
          <script src="js/konami.js"></script>
+         <script src="js/bootstrap.js"></script>
+         <script src="js/menu.js"></script>
            <link rel="stylesheet" href="css/top.css">
+           <link rel="stylesheet" href="css/bootstrap-grid.css">
            <link rel="stylesheet" href="css/body.css">
+           <script
+  src="https://code.jquery.com/jquery-3.5.1.js"
+  integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+  crossorigin="anonymous"></script>
          <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
       <link href="https://unpkg.com/nes.css@latest/css/nes.min.css" rel="stylesheet" />
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
 
       <script type="text/javascript">
 
@@ -26,7 +34,7 @@
         var leftValue = parseInt(pics.style.left);
         pics.style.left = leftValue-1280+"px"; 
          
-         if(leftValue== -3840){
+         if(leftValue== -8960){
         pics.style.left=0;
         }
         console.log(leftValue);
@@ -66,28 +74,39 @@
      </nav>
   </header>
     
+<article >
+  <div id="imgSlider">
+    <div id="pics" style="left:0px">
+      <a href="https://www.nintendo.co.jp/clv/features.html">
+    <img id="imgscroll" src="image/Banner/1.jpg" alt="">
+  </a>
+  <a href="https://www.nintendo.co.jp/clvs/index.html">
+    <img id="imgscroll2" src="image/Banner/2.jpg" alt="">
+  </a>
+  <a href="https://www.nintendo.com/super-nes-classic/">
+    <img id="imgscroll3" src="image/Banner/3.jpg"alt="">
+  </a>
+  <a href="https://www.nintendo.com/nes-classic/">
+    <img id="imgscroll4" src="image/Banner/4.jpg"alt="">
+  </a>
+  <a href="https://www.konami.com/games/pcemini/jp/ja/">
+    <img id="imgscroll4" src="image/Banner/5.jpg"alt="">
+  </a>
+  <a href="https://www.snk-corp.co.jp/us/neogeomini/">
+    <img id="imgscroll4" src="image/Banner/6.jpg"alt="">
+  </a>
+  <a href="https://www.nintendo.tw/hardware/gamewatch/">
+    <img id="imgscroll4" src="image/Banner/7.jpg"alt="">
+  </a>
+  <a href="https://sega.jp/mdmini/">
+    <img id="imgscroll4" src="image/Banner/8.jpg"alt="">
+  </a>
 
-  <div class="container">
-    <div class="row">
-         <div class="col">
-          <div id="imgSlider">
-            <div id="pics" style="left:0px">
-              <a href="https://www.nintendo.co.jp/clv/features.html">
-            <img id="imgscroll" src="image/Banner/1.jpg" alt="Responsive image" class="img-responsive">
-          </a>
-          <a href="https://www.nintendo.co.jp/clvs/index.html">
-            <img id="imgscroll2" src="image/Banner/2.jpg" alt="Responsive image" class="img-responsive">
-          </a>
-          <a href="https://www.nintendo.com/super-nes-classic/">
-            <img id="imgscroll3" src="image/Banner/3.jpg" alt="Responsive image" class="img-responsive">
-          </a>
-          <a href="https://www.nintendo.com/nes-classic/">
-            <img id="imgscroll4" src="image/Banner/4.jpg"alt="Responsive image" class="img-responsive">
-          </a>
-          </div>
-           </div>
-        </div>
- </div>
+
+  </div>
+   </div>
+</article>
+      
     
     <footer>
       <div style="text-align: center;">

@@ -1,14 +1,14 @@
 <html>
     <head>
-           
-      <style>@font-face {font-family: "Silver";src: url('ttf/bit.ttf');}body{font-family:"Silver";}</style>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-
-      <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
-   <link href="https://unpkg.com/nes.css@latest/css/nes.min.css" rel="stylesheet" />
-      <link rel="stylesheet" href="css/body.css">
-
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+      <script src="js/menu.js"></script>
+        <style>@font-face {font-family: "Silver";src: url('ttf/bit.ttf');}body,div,button{font-family:"Silver";font-size: 2rem;}</style>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+          <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+          <link rel="stylesheet" href="css/body.css">
+          <link rel="stylesheet" href="css/bootstrap-grid.css">
+        <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+     <link href="https://unpkg.com/nes.css@latest/css/nes.min.css" rel="stylesheet" />
+        
       
         <title>登入頁面</title>
     <meta charset="utf-8">
@@ -27,15 +27,15 @@
          </nav>
       </header>
       <article>
-        <div  style="max-width: 30vw; max-height: 30vh; text-align: center; margin: auto;"> 
+        <div  style="max-width: 30vw; max-height: 30vh; min-width: 500px; min-height: 500px; text-align: center; margin: auto;"> 
           
               <div class="nes-field is-inline">
-          <label for="warning_field">玩家名稱</label>
+          <label for="warning_field" style="white-space:nowrap;">玩家名稱</label>
           <input type="text" id="warning_field" class="nes-input is-warning" placeholder="YOURID">
              </div>
         <br>
                 <div class="nes-field is-inline">
-          <label for="warning_field">玩家密碼</label>
+          <label for="warning_field" style="white-space: nowrap;">玩家密碼</label>
           <input type="text" id="warning_field" class="nes-input is-warning" placeholder="PASSWORD">
                 </div>
         <br>
