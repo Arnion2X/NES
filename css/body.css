@@ -1,3 +1,6 @@
+.wordRed { color:red; font-weight:bold; }
+.wordBlue { color:blue; font-weight:bold; }
+
 .flex{
     display:flex;
     align-items:center;
@@ -57,44 +60,3 @@
     display: none;
   }
 
-
-
-  @media screen and (max-width: 500px){
-    .menu { width: 100%;
-        position: relative;
-        display: inline-block;
-    }
-    .toggle-nav {
-      width: 100%;
-        position: absolute;
-        left: 4%;
-        color: #ffffff;
-        text-decoration: none;
-        line-height: 40px;
-    }
-    .menu .menu-logo {
-        position: relative;
-        left: 40%;
-    }
-    .menu ul.active {
-        display: none;
-    }
-    .menu ul {
-        left: 0px;
-        padding: 10px 25px;
-        margin-top: -5px;
-        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.15);
-        border-radius: 0px 0px 3px 3px;
-        background: #ffffff;
-    }
-    .menu li {
-        margin: 10px 0px 10px 0px;
-        float: none;
-        display: block;
-    }
-    .menu a {
-        display: block;
-    }
-  }
-
-}
