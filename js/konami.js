@@ -15,7 +15,7 @@ var keyHandler = function (event) {
 	// If complete, alert and reset
 	if (pattern.length === current) {
 		current = 0;
-		document.location.href="game/SF33.html";
+		document.location.href="game/contra.html";
 	}
 
 };
