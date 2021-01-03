@@ -1,19 +1,38 @@
 <html>
     <head>
-      <audio hidden autoplay>
-        <source src="music/BOM.mp3" type="audio/mpeg">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="icon" href="icon/A.ico">
+      <audio hidden autoplay loop>
+        <source src="music/RUN.mp3" type="audio/mpeg">
       </audio>
       <link rel="icon" href="icon/A.ico">
       <title>High Score</title>
       <style>@font-face {font-family: "Silver";src: url('ttf/bit.ttf');}body,div{font-family:"Silver"; font-size: 2rem;}</style>
          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-         <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
          <link href="https://unpkg.com/nes.css@latest/css/nes.min.css" rel="stylesheet" />
- 
+         <link rel="stylesheet" href="css/signin.css">
+         
+         <style>
+          .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+          }
+    
+          @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+              font-size: 3.5rem;
+            }
+          }
+        </style>
+
+
     </head>
-<body style="background-color: rgb(130, 233, 156);">
+<body class=" text-center backback">
     <!--以下是BootStrap的導覽列-->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
       <a class="navbar-brand" href="index.html">  <i class="snes-jp-logo"></i></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav3" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -43,43 +62,48 @@
     <!--以上是BootStrap的導覽列-->
 
 <!--登入區-->   
-<div class="container ">
-
-  <div class="row align-items-center">
-    <div class="col-12">
-      <div class="nes-field is-inline">
-      <label for="warning_field" style="white-space:nowrap;">玩家名稱</label>
-      <input type="text" id="warning_field" class="nes-input  is-success" placeholder="YOURID">
+<div class="container-fluid">
+  <main class="form-signin">
+    <form id="logForm" name="logForm" method="post" onsubmit="logInData()">
+      <img class="mb-4" src="image/gif/GHOST.gif" alt="" width="150vw" height="150vh">
+      <h1 class="h1 mb-0 fw-normal">登入你的高分!</h1>
+      <label for="inputEmail" class="visually-hidden">電子信箱</label>
+      <input name="email1" type="email" id="inputEmail" class="nes-input is-error" placeholder="你的大名" required autofocus>
+      <label for="inputPassword" class="visually-hidden">密碼</label>
+      <input name="pass1" type="password" id="inputPassword" class="nes-input is-error" placeholder="你的暗號" required>
+      <div class="checkbox mb-3">
+        <label>
+          <input type="checkbox" class="nes-checkbox" checked />
+          <span>記住我</span>
+        </label>
+        
       </div>
-    </div>
-    <div class="col-12">
-      <div class="nes-field is-inline">
-        <label for="warning_field" style="white-space: nowrap;">玩家密碼</label>
-        <input type="text" id="warning_field" class="nes-input  is-success" placeholder="PASSWORD">
-      </div>
-    </div>
-
-    <div class="col-12 text-center">
-      <button type="button" class="nes-btn"> <div class="h5">登入</div></button>
-    </div>
-  
-  
-  
-
-  </div>
+      <button class="w-100 nes-btn is-error btn-lg" type="submit" >登入!</button>
+      <p class="mt-5 mb-3 text-muted">&copy; 2017-2020</p>
+    </form>
+  </main>
 </div>
 
-        
-    
-
 <!--登入區-->
-     
 
-     
 
+
+<script>
+    
+  function logInData() {
+    var emailElement = document.getElementById("inputEmail");
+  var yourEmail = emailElement.value;
+  var passElement = document.getElementById("inputPassword");
+  var yourPass = passElement.value;
+  alert("你的信箱是" + yourEmail + "\n密碼是 "+ yourPass);
+
+  }
+    </script>  
+    
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>      
+ 
 </body>
 
 </html>
